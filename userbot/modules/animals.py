@@ -21,10 +21,10 @@ import requests
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, bot
-from userbot.events import cilik_cmd
+from userbot.events import wiki_cmd
 
 
-@bot.on(cilik_cmd(outgoing=True, pattern="shibe$"))
+@bot.on(wiki_cmd(outgoing=True, pattern="dog$"))
 async def shibe(event):
     await event.edit("`Processing...`")
     response = requests.get("https://shibe.online/api/shibes").json()
@@ -35,7 +35,7 @@ async def shibe(event):
     await event.delete()
 
 
-@bot.on(cilik_cmd(outgoing=True, pattern="cat$"))
+@bot.on(wiki_cmd(outgoing=True, pattern="cat$"))
 async def cats(event):
     await event.edit("`Processing...`")
     response = requests.get("https://shibe.online/api/cats").json()
@@ -51,7 +51,7 @@ CMD_HELP.update(
         "animals": f"**Plugin : **`animals`\
         \n\n  •  **Syntax :** `{cmd}cat`\
         \n  •  **Function : **Untuk Mengirim gambar kucing secara random.\
-        \n\n  •  **Syntax :** `{cmd}shibe`\
+        \n\n  •  **Syntax :** `{cmd}dog`\
         \n  •  **Function : **Untuk Mengirim gambar random dari anjing jenis Shiba.\
     "
     }
