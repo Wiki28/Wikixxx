@@ -93,7 +93,7 @@ async def get_users(event):
 
 CMD_HELP.update(
     {
-        "culik": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.culik groups username`\
+        "invite": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.culik groups username`\
           \n📌 : __Scrapes users from the given chat to your group__."
     }
 )
