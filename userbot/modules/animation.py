@@ -1210,13 +1210,13 @@ async def _(event):
             
 
 
-@bot.on(wiki_cmd(pattern=f"cilik$", outgoing=True))
+@bot.on(wiki_cmd(pattern=f"wikii$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1
     animation_ttl = range(11)
-    await edit_or_reply(event, "cilik")
+    await edit_or_reply(event, "Wiki")
     animation_chars = [
         f"⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️\n⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️\n⚫️⚪️⚫️..**{ALIVE_NAME}**..⚫️⚪️⚫️\n⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️\n⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️\n",
         f"⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️\n⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️\n⚪️⚫️⚪️..**{ALIVE_NAME}**..⚪️⚫️⚪️\n⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️\n⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️⚫️⚪️\n",
@@ -1285,8 +1285,8 @@ CMD_HELP.update(
     \nUsage: liat sendiri\
     \n\n`{cmd}santet`\
     \nUsage: Santet Online Buat Bercanda.\
-    \n\n`{cmd}cilik`\
-    \nUsage: Cilik Userbot.\
+    \n\n`{cmd}wikii`\
+    \nUsage: Wiki Userbot.\
     \n\n`{cmd}city`\
     \nUsage: Pemandangan Kota."
     }
