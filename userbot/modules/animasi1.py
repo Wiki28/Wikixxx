@@ -1,8 +1,3 @@
-# Ported by @Pocongonlen
-# From Pocong-Userbot <https://github.com/poocong/Pocong-Userbot>
-# Recode by @greyyvbss
-
-
 from time import sleep
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
@@ -73,41 +68,6 @@ async def _(event):
     sleep(1)
     await xx.edit("pantes **NORAK**")
     
-@wiki_cmd(pattern="jawa(?: |$)(.*)")
-async def _(event):
-    xx = await edit_or_reply(event, f"baik")
-    sleep(1)
-    await xx.edit("Tidak Sombong")
-    sleep(1)
-    await xx.edit("Ganteng")
-    sleep(1)
-    await xx.edit("Sopan")
-    sleep(1)
-    await xx.edit("Rajin")
-    sleep(1)
-    await xx.edit("Budiman")
-    sleep(1)
-    await xx.edit("Alim")
-    sleep(1)
-    await xx.edit("Berguna")
-    sleep(1)
-    await xx.edit("**Nguli Juga**")
-    sleep(1)
-    await xx.edit("Pemaaf")
-    sleep(1)
-    await xx.edit("Jujur")
-    sleep(1)
-    await xx.edit("Tidk Sombong")
-    sleep(1)
-    await xx.edit("Kaya")
-    sleep(1)
-    await xx.edit("Pokoknya Jawa Pro Dah")
-    sleep(1)
-    await xx.edit("Tidak Seperti Yang Lain")
-    sleep(1)
-    await xx.edit("Bersama Kuli Membangun Negri")
-    sleep(1)
-    await xx.edit("eh salah salah, \nBersama **Jawa** Membangun Negri")
     
 @wiki_cmd(pattern="erpe(?: |$)(.*)")
 async def _(event):
