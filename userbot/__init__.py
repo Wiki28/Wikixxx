@@ -143,8 +143,8 @@ SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
 
 # Support
-GROUP = os.environ.get("GROUP", "CilikSupport")
-CHANNEL = os.environ.get("CHANNEL", "CilikProject")
+GROUP = os.environ.get("GROUP", "WikiTapiGroup")
+CHANNEL = os.environ.get("CHANNEL", "WikiTapiChannel")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -159,7 +159,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/grey423/CilikUserbot.git"
+    "UPSTREAM_REPO_URL", "https://github.com/Wiki28/WikiUserBot.git"
 )
 
 # SQL Database URI
@@ -202,16 +202,16 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", None)
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Cilik-Userbot")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Wiki-Userbot")
 
 # Custom Emoji Alive
-ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✪")
+ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "☘")
 
 # Custom Emoji Alive
 INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "")
 
 # Custom icon HELP
-ICON_HELP = os.environ.get("ICON_HELP", "✪")
+ICON_HELP = os.environ.get("ICON_HELP", "☘")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -227,7 +227,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "CilikUserbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "WikiUserBot")
 
 # Bot version
 BOT_VER = os.environ.get("BOT_VER", "1.0")
@@ -346,7 +346,7 @@ async def check_botlog_chatid() -> None:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**CilikUserBot v{BOT_VER} is back up and running!**\n\n"
+        f"**Wiki-Userbot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -522,26 +522,26 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@CilikSupport"):
+            if event.query.user_id == uid and query.startswith("@WikiTapiGroup"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logoman,
                     link_preview=False,
-                    text=f"**✪ Cilik-Userbot Inline Menu ✪**\n\n✪ **Owner** [{user.first_name}](tg://user?id={user.id})\n✪ **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**☘ Wiki-Userbot Inline Menu ☘**\n\n☘ **Owner** [{user.first_name}](tg://user?id={user.id})\n☘ **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository CilikUserbot",
-                    url="https://t.me/CilikSupport",
+                    description="Repository Wiki-Userbot",
+                    url="https://t.me/WikiTapiGroup",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**Cilik-UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✪ **Owner Repo :** [Grey](https://t.me/greyyvbss)\n✪ **Support :** @CilikSupport\n✪ **Repository :** [CilikUserbot](https://github.com/grey423/CilikUserbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Wiki-UserBot**\n➖➖➖➖➖➖➖➖➖➖\n☘ **Owner Repo :** [Wiki W](https://t.me/Wiki_W)\n☘ **Support :** @WikiTapiGroup\n☘ **Repository :** [Wiki-Userbot](https://github.com/Wiki28/WikiUserBot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/CilikSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/WikiTapiGroup"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/grey423/CilikUserbot"
+                                "ʀᴇᴘᴏ", "https://github.com/Wiki28/WikiUserBot"
                             ),
                         ],
                     ],
@@ -581,16 +581,16 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✪ Cilik-Userbot ✪",
-                    description="CilikUserBot | Telethon",
-                    url="https://t.me/CilikSupport",
+                    title="☘ Wiki-Userbot ☘",
+                    description="WikiUserBot | Telethon",
+                    url="https://t.me/WikiTapiGroup",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**Cilik-UserBot**\n➖➖➖➖➖➖➖➖➖➖\n✪ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n✪ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n✪ **Support:** @CilikSupport\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Wiki-UserBot**\n➖➖➖➖➖➖➖➖➖➖\n☘ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n☘ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n☘ **Support:** @WikiTapiGroup\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/CilikSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/WikiTapiGroup"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/grey423/CilikUserbot"
+                                "ʀᴇᴘᴏ", "https://github.com/Wiki28/WikiUserBot"
                             ),
                         ],
                     ],
@@ -605,7 +605,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**✪ Cilik-Userbot Inline Menu ✪**\n\n✪ **Owner** [{user.first_name}](tg://user?id={user.id})\n✪ **Jumlah** `{len(dugmeler)}` Modules"
+                text = f"**☘ Wiki-Userbot Inline Menu ☘**\n\n☘ **Owner** [{user.first_name}](tg://user?id={user.id})\n☘ **Jumlah** `{len(dugmeler)}` Modules"
                 await event.edit(
                     text,
                     file=logoman,
