@@ -5,7 +5,7 @@
 #
 # inline credit @keselekpermen69
 # From Man-Userbot @mrismanaziz
-# Recode by @greyyvbss
+# Recode by @Wiki_W
 """ Userbot initialization. """
 
 import logging
@@ -91,20 +91,20 @@ if CONFIG_CHECK:
 
 while 0 < 6:
     _DEVS = get(
-        "https://raw.githubusercontent.com/grey423/Reforestation/master/DEVS.json"
+        "https://raw.githubusercontent.com/Wiki28/Reforestation/Wiki-Userbot/DEVS.json"
     )
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
         else:
-            DEVS = [1784606556, 844432220, 1675900974, 1783401893, 1593802955, 1979717764]
+            DEVS = [2048936969]
             break
     DEVS = _DEVS.json()
     break
 
 del _DEVS
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1784606556").split()}
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "2048936969").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 # For Blacklist Group Support
@@ -137,7 +137,7 @@ PM_LIMIT = int(os.environ.get("PM_LIMIT", 6))
 # Custom Handler command
 CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 
-SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
+SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"\")
 
 # Owner ID
 OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
