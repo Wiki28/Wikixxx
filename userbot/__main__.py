@@ -27,10 +27,10 @@ try:
     bot.start()
     call_py.start()
     user = bot.get_me()
-    blacklistcilik = requests.get(
-        "https://raw.githubusercontent.com/grey423/Reforestation/master/cilikblacklist.json"
+    blacklistwiki = requests.get(
+        "https://raw.githubusercontent.com/Wiki28/Reforestation/Wiki-Userbot/wikiblacklist.json"
     ).json()
-    if user.id in blacklistcilik:
+    if user.id in blacklistwiki:
         LOGS.warning(
             "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE JAMET KEK LU.\nCredits: @greyyvbss"
         )
@@ -43,23 +43,23 @@ for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
 LOGS.info(
-    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/CilikSupport"
+    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/WikiSupport"
 )
 
-LOGS.info(f"Cilik-Userbot ⚙️ V{BOT_VER} [🔥 BERHASIL DIAKTIFKAN! 🔥]")
+LOGS.info(f"Wiki-Userbot ⚙️ V{BOT_VER} [BERHASIL DIAKTIFKAN!]")
 
 
-async def cilik_userbot_on():
+async def wiki_userbot_on():
     try:
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"✪ **Cilik-Userbot Berhasil Di Aktifkan** ✪\n━━\n➠ **Userbot Version -** `{BOT_VER}@{branch}`\n➠ **Ketik** `{cmd}alive` **untuk Mengecheck Bot**\n━━",
+                f"☘ **Wiki-Userbot Berhasil Di Aktifkan** ☘\n━━\n➠ **Userbot Version -** `{BOT_VER}@{branch}`\n➠ **Ketik** `{cmd}alive` **untuk Mengecheck Bot**\n━━",
             )
     except Exception as e:
         LOGS.info(str(e))
     try:
-        await bot(JoinChannelRequest("@CilikProject"))
+        await bot(JoinChannelRequest("@WikiTapiChannel"))
     except BaseException:
         pass
     try:
@@ -67,7 +67,7 @@ async def cilik_userbot_on():
     except BaseException:
         pass
     try:
-        await bot(JoinChannelRequest("@CilikSupport"))
+        await bot(JoinChannelRequest("@WikiTapiGroup"))
     except BaseException:
         pass
     
@@ -75,7 +75,7 @@ async def cilik_userbot_on():
 
 bot.loop.run_until_complete(waiting())
 bot.loop.run_until_complete(checking())
-bot.loop.run_until_complete(cilik_userbot_on())
+bot.loop.run_until_complete(wiki_userbot_on())
 if not BOT_TOKEN:
     bot.loop.run_until_complete(autobot())
 idle()
