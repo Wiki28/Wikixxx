@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./resources/GeezFire.gif" width="35px">Cɪʟɪᴋ-Uꜱᴇʀʙᴏᴛ<img src="./resources/GeezFire.gif" width="35px"></h1>
+<h1 align="center"><img src="./resources/GeezFire.gif" width="35px">Wiki-Uꜱᴇʀʙᴏᴛ<img src="./resources/GeezFire.gif" width="35px"></h1>
 <p align="center">
     <img alt="CILIK VERSION" src="https://img.shields.io/badge/CILIK%20VERSION-4.+-brightgreen"/>
     <img alt="BUILD IN" src="https://img.shields.io/badge/BUILD%20-Last Day-brightgreen"/>
@@ -27,7 +27,7 @@ mengelola grup secara efisien dan mengotomatiskan beberapa hal yang membosankan.
 Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ```
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/grey423/Deploy"> <img 
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/wiki28/wikiuserbot"> <img 
 src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 
