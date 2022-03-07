@@ -10,10 +10,10 @@
    </p>
 
 <p align="center">
-  <img src="https://telegra.ph/file/ac134f6d295ad0c03af9b.jpg">
+  <img src="">
 </p>
 
-Cilik-Userbot adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
+Wiki-Userbot adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
 
 Berbasis [Paperplane](https://github.com/RaphielGang/Telegram-UserBot) dan [ProjectBish](https://github.com/adekmaulana/ProjectBish) userbot.
 Saya membuat repository ini untuk memilih dan menambahkan beberapa modul yang saya butuhkan dengan banyak perubahan, fitur dan modul.
