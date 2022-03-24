@@ -18,12 +18,12 @@ from userbot.utils import edit_delete, edit_or_reply, cilik_cmd
 
 while 0 < 6:
     _GCAST_BLACKLIST = get(
-        "https://raw.githubusercontent.com/grey423/Reforestation/master/blacklistgcast.json"
+        "https://raw.githubusercontent.com/wiki28/Reforestation/master/blacklistgcast.json"
     )
     if _GCAST_BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        GCAST_BLACKLIST = [-1001687155877, -1001473548283]
+        GCAST_BLACKLIST = [-1001508910413]
         break
     GCAST_BLACKLIST = _GCAST_BLACKLIST.json()
     break
